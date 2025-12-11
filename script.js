@@ -35,3 +35,12 @@ console.log(getHumanChoice())
 
 let humanScore = 0;
 let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+    //Code here
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputersChoice();
+
+playRound(humanSelection, computerSelection);
