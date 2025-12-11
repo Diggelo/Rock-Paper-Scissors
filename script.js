@@ -20,11 +20,12 @@ console.log(getComputersChoice())
 //Get the choice from the user
 function getHumanChoice() {
     let humanChoice = prompt("What do you choose? Rock, Paper or Scissors!: ")
-    if (humanChoice === "Rock"){
+    humanChoice = humanChoice.toLowerCase();
+    if (humanChoice === "rock"){
         return console.log("You choose " + humanChoice);
-    } else if (humanChoice === "Paper") {
+    } else if (humanChoice === "paper") {
         return console.log("You choose " + humanChoice);
-    } else if (humanChoice === "Scissors") {
+    } else if (humanChoice === "scissors") {
         return console.log("You choose " + humanChoice);
     } else {
         return console.log("Make a valid choice you fool!")
