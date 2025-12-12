@@ -19,7 +19,7 @@ let humanChoice = "";
 
 //Get the choice from the user
 function getHumanChoice() {
-    let humanChoice = prompt("What do you choose? Rock, Paper or Scissors!: ")
+    humanChoice = prompt("What do you choose? Rock, Paper or Scissors!: ")
     humanChoice = humanChoice.toLowerCase();
     if (humanChoice === "rock"){
         return console.log("You choose " + humanChoice);
@@ -42,25 +42,25 @@ function playRound(humanChoice, computerChoice) {
     }
 
 //human got rock, can meet computer paper or scissors (rock is a tie)
- if (humanChoice === "rock" && computerChoice === "scissors") {
-    return console.log("You win! Rock beats scissors.")
- } else {
-    return console.log("You loose! Paper beats rock.")
- }
+    if (humanChoice === "rock" && computerChoice === "scissors") {
+        return console.log("You win! Rock beats scissors.")
+    } else {
+        return console.log("You loose! Paper beats rock.")
+    }
 
  //human got paper, can meet computer scissors or rock (paper is a tie)
- if (humanChoice === "paper" && computerChoice === "rock") {
-    return console.log("You win! Paper beats rock.")
- } else {
-    return console.log("You loose! Scissors beats paper.")
- }
+    if (humanChoice === "paper" && computerChoice === "rock") {
+        return console.log("You win! Paper beats rock.")
+    } else {
+        return console.log("You loose! Scissors beats paper.")
+    }
 
 //human got scissors, can meet computer paper or rock (scissors is a tie)
- if (humanChoice === "scissors" && computerChoice === "paper") {
-    return console.log("You win! Scissors beats paper.")
- } else {
-    return console.log("You loose! Rock beats scissors.")
- }
+    if (humanChoice === "scissors" && computerChoice === "paper") {
+        return console.log("You win! Scissors beats paper.")
+    } else {
+        return console.log("You loose! Rock beats scissors.")
+    }
 }
 
 
