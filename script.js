@@ -1,21 +1,21 @@
-console.log("Hello, Diggelo!")
+console.log("Welcome to Rock, paper, scissor!")
 
-//Use the math.random to get three options for rock, paper, scissor
+let computerChoice = ""
+
+//Use the math.random to get three options for rock, paper, scissor for computer
 function getComputersChoice() {
     let randomNum = Math.floor(Math.random() * 3);
-    let choice = ""
     if (randomNum === 0) {
-        choice = "rock";
+        computerChoice = "rock";
     } else if (randomNum === 1) {
-        choice = "paper";
+        computerChoice = "paper";
     } else if (randomNum === 2) {
-        choice = "scissors";
+        computerChoice = "scissors";
     }
-    return choice
+    return console.log(computerChoice)
 }
 
-console.log(getComputersChoice())
-
+let humanChoice = "";
 
 //Get the choice from the user
 function getHumanChoice() {
@@ -32,33 +32,31 @@ function getHumanChoice() {
     }
 }
 
-console.log(getHumanChoice())
-
 let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
 // TIE if human and computer got same result
-    if (humanSelection === computerSelection) {
+    if (humanChoice === computerChoice) {
         return console.log("It´s a tie, try again!")
     }
 
 //human got rock, can meet computer paper or scissors (rock is a tie)
- if (humanSelection === "rock" && computerSelection === "scissors") {
+ if (humanChoice === "rock" && computerChoice === "scissors") {
     return console.log("You win! Rock beats scissors.")
  } else {
     return console.log("You loose! Paper beats rock.")
  }
 
  //human got paper, can meet computer scissors or rock (paper is a tie)
- if (humanSelection === "paper" && computerSelection === "rock") {
+ if (humanChoice === "paper" && computerChoice === "rock") {
     return console.log("You win! Paper beats rock.")
  } else {
     return console.log("You loose! Scissors beats paper.")
  }
 
 //human got scissors, can meet computer paper or rock (scissors is a tie)
- if (humanSelection === "scissors" && computerSelection === "paper") {
+ if (humanChoice === "scissors" && computerChoice === "paper") {
     return console.log("You win! Scissors beats paper.")
  } else {
     return console.log("You loose! Rock beats scissors.")
@@ -69,4 +67,9 @@ function playRound(humanChoice, computerChoice) {
 const humanSelection = getHumanChoice();
 const computerSelection = getComputersChoice();
 
+
+
 playRound(humanSelection, computerSelection);
+
+console.log(humanChoice)
+console.log(computerChoice)
