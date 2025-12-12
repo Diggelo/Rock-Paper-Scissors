@@ -1,7 +1,5 @@
 console.log("Welcome to Rock, paper, scissor!")
 
-// let computerChoice = ""
-
 //Use the math.random to get three options for rock, paper, scissor for computer
 function getComputersChoice() {
     let randomNum = Math.floor(Math.random() * 3);
@@ -15,8 +13,6 @@ function getComputersChoice() {
     console.log("Computer choose " + computerChoice)
     return computerChoice
 }
-
-// let humanChoice = "";
 
 //Get the choice from the user
 function getHumanChoice() {
@@ -74,7 +70,6 @@ function playRound(humanValue, computerValue) {
         return console.warn("You loose! Rock beats scissors.")
     }
 }
-
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputersChoice();
