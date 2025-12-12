@@ -33,8 +33,8 @@ function getHumanChoice() {
     }
 }
 
-let humanScore = 0;
-let computerScore = 0;
+// let humanScore = 0; (moved to playGame)
+// let computerScore = 0; (moved to playGame)
 
 function playRound(humanValue, computerValue) {
     
@@ -71,16 +71,66 @@ function playRound(humanValue, computerValue) {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputersChoice();
+// const humanSelection = getHumanChoice(); (moved to playGame)
+// const computerSelection = getComputersChoice(); (moved to playGame)
 
 // console.log("Check humanSelection: " + humanSelection);
 // console.log("Check computerSelection: " + computerSelection);
 
-playRound(humanSelection, computerSelection);
+// playRound(humanSelection, computerSelection); (moved to playGame)
 
 // console.log("humanChoice: " + humanChoice);
 // console.log("computerChoice: " + computerChoice);
+
+    let humanScore = 0;
+    let computerScore = 0;
+    let humanSelection = "";
+    let computerSelection = "";
+
+// get new choices from human and computer
+function getChoices () {
+    humanSelection = getHumanChoice();
+    computerSelection = getComputersChoice();
+}
+
+// function to play the game
+function playGame() {
+    // round 1
+    getChoices()
+    playRound(humanSelection, computerSelection);
+    console.log(("Finished round 1, the results are Human: " + humanScore) + (" Computer: " + computerScore));
+
+    // round 2
+    getChoices()
+    playRound(humanSelection, computerSelection);
+    console.log(("Finished round 2, the results are Human: " + humanScore) + (" Computer: " + computerScore));
+    
+    // round 3
+    getChoices()
+    playRound(humanSelection, computerSelection);
+    console.log(("Finished round 3, the results are Human: " + humanScore) + (" Computer: " + computerScore));
+    
+    // round 4
+    getChoices()
+    playRound(humanSelection, computerSelection);
+    console.log(("Finished round 4, the results are Human: " + humanScore) + (" Computer: " + computerScore));
+
+    // round 5 (final round)
+    getChoices()
+    playRound(humanSelection, computerSelection);
+    console.log(("Finished final round, the results are Human: " + humanScore) + (" Computer: " + computerScore));
+
+    // Scores after the game
+    if (humanScore < computerScore) {
+        return console.log("You loose! The end results are: Human: " + humanScore + " Computer: " + computerScore);
+    } else if (humanScore > computerScore) {
+        return console.log("You win! The end results are: Human: " + humanScore + " Computer: " + computerScore);
+    } else if (humanScore === computerScore) {
+        return console.log("It's a tie! The end results are: Human: " + humanScore + " Computer: " + computerScore);
+    }
+}
+
+playGame()
 
 console.log("Human score: " + humanScore);
 console.log("Computer score: " + computerScore);
