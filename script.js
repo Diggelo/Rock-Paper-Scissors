@@ -1,4 +1,6 @@
-console.log("Welcome to Rock, paper, scissor!");
+console.log("Welcome to Rock, paper, scissors!");
+console.log("Here we go!");
+
 
 //Use the math.random to get three options for rock, paper, scissor for computer
 function getComputersChoice() {
@@ -16,7 +18,7 @@ function getComputersChoice() {
 
 //Get the choice from the user
 function getHumanChoice() {
-    humanChoice = prompt("What do you choose? Rock, Paper or Scissors!: ")
+    humanChoice = prompt("What do you choose? Rock, Paper or Scissors!: ");
     humanChoice = humanChoice.toLowerCase();
     if (humanChoice === "rock"){
         console.log("You choose " + humanChoice);
