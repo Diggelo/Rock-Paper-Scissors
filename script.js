@@ -42,7 +42,7 @@ function playRound(humanValue, computerValue) {
     
     // TIE if human and computer got same result
     if (humanValue === computerValue) {
-        return console.warn("It´s a tie, try again!");
+        return console.warn("It´s a tie, no points here!");
     }
 
 //human got rock, can meet computer paper or scissors (rock is a tie)
@@ -124,11 +124,11 @@ function playGame() {
 
     // Scores after the game
     if (humanScore < computerScore) {
-        return console.log("You loose! The end results are: Human: " + humanScore + " Computer: " + computerScore);
+        return console.warn("You loose! The end results are: Human: " + humanScore + " Computer: " + computerScore);
     } else if (humanScore > computerScore) {
-        return console.log("You win! The end results are: Human: " + humanScore + " Computer: " + computerScore);
+        return console.warn("You win! The end results are: Human: " + humanScore + " Computer: " + computerScore);
     } else if (humanScore === computerScore) {
-        return console.log("It's a tie! The end results are: Human: " + humanScore + " Computer: " + computerScore);
+        return console.warn("It's a tie! The end results are: Human: " + humanScore + " Computer: " + computerScore);
     }
 }
 
